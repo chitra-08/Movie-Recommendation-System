@@ -1,0 +1,66 @@
+.centered {
+  position: absolute;
+  top: 10%;
+  left: 35%;
+  bottom: 30%;
+  text-align: left;
+}
+.para {
+  position: absolute;
+  top: 55%;
+  left: 35%;
+  right: 25%;
+  bottom: 30%;
+  text-align: left;
+}
+
+.btn {
+  border:4;
+  border-color:#000;
+  outline: 3;
+  color: white;
+  background-color: #bbf;
+  text-align: center;
+  cursor: pointer;
+  font-size: 15px;
+  font-family: Cursive;
+}
+
+body {
+ background-image: url("bg.jpg");
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+ background-size: 100% 100%;
+}
+
+.heading {
+  font-family: Cursive;
+  color: white;
+}
+
+.p1 {
+  font-family: Cursive;
+  color: white;
+  position: absolute;
+  top: 25%;
+  left: 35%;
+  right: 25%;
+  bottom: 10%;
+  text-align: left;
+}
+.grid-container {
+  display: grid;
+  grid-template: 80px / auto auto auto;
+  grid-gap: 15px;
+  background-color: #6495ED;
+  padding: 15px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 20px;
+  font-family: Cursive;
+}
+

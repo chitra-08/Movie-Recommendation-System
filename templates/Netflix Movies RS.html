@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Recommendation (Latest 2021)</title>
+    <link href="{{url_for('static', filename ='style.css')}}" rel="stylesheet" />
+</head>
+<body>
+<div class="centered">
+<h2 class="heading">Welcome to Recommendation Application System</h2>
+<form action="/contentBased" method="post">
+    <input type="text" id="searchMovieText" name="searchMovieText" placeholder="Enter the movie name here.." size="60" maxlength="150" required="required"/>
+    <input type="submit" id="contentBased" class="btn" value="Recommend Movies">
+</form>
+</div>
+<p class="p1">Recommendation System application recommends you the movies based on your searched movie like the movies
+    which might be of similar taste as the one you searched. The app deals with mostly English movies till the year 2021.
+    Try to search the full name of the movie else app won't be able to recommend you the movies. Here is the csv/html link that
+    has the movie dump. Categories considered - movie/tvMovie<br/><br/>
+    Download CSV: <a href="{{url_for('static', filename ='netflix_list.csv')}}">Movie Listing</a><br/>
+    Show CSV in HTML page: <a href="/showMovies" target="_blank">Movie Listing HTML</a>
+</p>
+
+<div class="para">
+    {% if movie_list != NA %}
+        <h2 class="heading"> So, here are your movie recommendations for "{{movie_list[0].capitalize()}}"..</h2>
+        <div class="grid-container">
+        {% for row in movie_list[1:] %}
+            <div class="item4">{{row.capitalize()}}</div>
+        {% endfor %}
+    {% endif %}
+        </div>
+
+</div>
+
+</body>
+</html>
